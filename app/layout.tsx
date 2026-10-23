@@ -16,7 +16,7 @@ function Header() {
       <a className="wordmark" href="/" aria-label="Tripwire home"><span className="wordmark-mark" aria-hidden="true">T</span>Tripwire</a>
       <nav aria-label="Primary navigation" className="site-nav">
         <a href="/">Feed</a>
-        <a href="/status">Status</a>
+        <a href="/status">Coverage</a>
         {clerkConfigured ? (
           <div className="account-controls">
             <Show when="signed-in"><OrganizationSwitcher hidePersonal={false} /><UserButton /></Show>
@@ -31,7 +31,7 @@ function Header() {
 }
 
 export default function RootLayout({ children }: Readonly<{ children: ReactNode }>) {
-  const content = <><Header /><main>{children}</main><footer><span>Tripwire</span><span>Public evidence for human review.</span></footer></>;
+  const content = <><Header /><main>{children}</main><footer><span>Tripwire</span><span>Company signals. Source included.</span></footer></>;
   return (
     <html lang="en">
       <body>{clerkConfigured ? <ClerkProvider>{content}</ClerkProvider> : content}</body>

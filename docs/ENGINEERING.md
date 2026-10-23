@@ -7,7 +7,7 @@
 - `/api/export?profileId=...` exports up to 1,000 authenticated CSV rows.
 - `/api/feedback` accepts authenticated same-origin feedback; tenant and user identity come from the verified session.
 - `/api/collect` accepts operator-allowlisted same-origin POST requests. Scheduled GET requests require a valid bearer token configured through `CRON_SECRET` (at least 32 characters).
-- `/status` and `/api/health` report collection health.
+- `/status` presents client-facing company coverage and last successful refresh dates. `/api/health` exposes collection diagnostics.
 
 Evaluation currently examines the latest 10,000 active observations. Pagination and materialized evaluation are planned for larger catalogs.
 

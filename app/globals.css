@@ -857,3 +857,9 @@ footer {
     min-width: 320px;
   }
 }
+
+.coverage-summary { grid-template-columns: repeat(2, 1fr); }
+.role-context { margin: 0 0 20px; color: var(--ash); font-size: 12px; }
+.role-context summary { cursor: pointer; padding: 6px 0; width: fit-content; }
+.role-context summary:focus-visible { outline: 2px solid var(--green); outline-offset: 3px; }
+.role-context .event-text { margin: 8px 0 0; }

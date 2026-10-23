@@ -16,7 +16,7 @@ Built with **Next.js, PostgreSQL, and Clerk**.
 - **Reusable use cases.** Versioned profiles for AI automation and technology modernization run against the same collected catalog.
 - **Continuous monitoring.** Scheduled collection tracks new listings, edits, and removals while retaining observation history.
 - **Authenticated workspaces.** Clerk handles sign-in and optional organization workspaces. Members can review signals, record relevance feedback, and export CSV.
-- **Visible source health.** A public status page reports collection freshness and board-level results.
+- **Company coverage.** Browse monitored companies, indexed roles, and the freshness of each company’s data.
 
 ## How it works
 
