@@ -13,7 +13,7 @@ const clerkConfigured = Boolean(process.env.NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY &&
 function Header() {
   return (
     <header className="site-header">
-      <a className="wordmark" href="/" aria-label="Tripwire home">tripwire<span>.</span></a>
+      <a className="wordmark" href="/" aria-label="Tripwire home"><span className="wordmark-mark" aria-hidden="true">T</span>Tripwire</a>
       <nav aria-label="Primary navigation" className="site-nav">
         <a href="/">Feed</a>
         <a href="/status">Status</a>

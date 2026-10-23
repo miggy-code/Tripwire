@@ -25,9 +25,9 @@ export default async function HomePage() {
   return (
     <>
       <section className="intro" aria-labelledby="page-title">
-        <p className="eyebrow"><span className="signal-dot" aria-hidden="true" />Signal review</p>
-        <h1 id="page-title">Public changes.<br />Clear evidence.</h1>
-        <p className="intro-copy">Tripwire records public company signals and preserves the source context. It surfaces questions to investigate, never a claim that a company is buying.</p>
+        <p className="eyebrow"><span className="signal-dot" aria-hidden="true" />Live signal ledger</p>
+        <h1 id="page-title">Company signals.<br /><em>A clearer next move.</em></h1>
+        <p className="intro-copy">Tripwire monitors public company activity, keeps the original source attached, and turns it into a reviewable research queue.</p>
       </section>
       <Feed initialFeed={feed} authenticated={authenticated} />
     </>
