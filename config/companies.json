@@ -1,0 +1,15 @@
+[
+  {"id":"vercel","name":"Vercel","domain":"vercel.com","verified":true,"verifiedAt":"2026-10-23","verificationUrl":"https://vercel.com/careers","boards":[{"source":"greenhouse","slug":"vercel"}]},
+  {"id":"anthropic","name":"Anthropic","domain":"anthropic.com","verified":true,"verifiedAt":"2026-10-23","verificationUrl":"https://www.anthropic.com/careers","boards":[{"source":"greenhouse","slug":"anthropic"}]},
+  {"id":"figma","name":"Figma","domain":"figma.com","verified":true,"verifiedAt":"2026-10-23","verificationUrl":"https://www.figma.com/careers/","boards":[{"source":"greenhouse","slug":"figma"}]},
+  {"id":"mercury","name":"Mercury","domain":"mercury.com","verified":true,"verifiedAt":"2026-10-23","verificationUrl":"https://mercury.com/careers","boards":[{"source":"greenhouse","slug":"mercury"}]},
+  {"id":"brex","name":"Brex","domain":"brex.com","verified":true,"verifiedAt":"2026-10-23","verificationUrl":"https://www.brex.com/careers","boards":[{"source":"greenhouse","slug":"brex"}]},
+  {"id":"cloudflare","name":"Cloudflare","domain":"cloudflare.com","verified":true,"verifiedAt":"2026-10-23","verificationUrl":"https://www.cloudflare.com/careers/jobs/","boards":[{"source":"greenhouse","slug":"cloudflare"}]},
+  {"id":"databricks","name":"Databricks","domain":"databricks.com","verified":true,"verifiedAt":"2026-10-23","verificationUrl":"https://www.databricks.com/company/careers","boards":[{"source":"greenhouse","slug":"databricks"}]},
+  {"id":"scale-ai","name":"Scale AI","domain":"scale.com","verified":true,"verifiedAt":"2026-10-23","verificationUrl":"https://scale.com/careers","boards":[{"source":"greenhouse","slug":"scaleai"}]},
+  {"id":"datadog","name":"Datadog","domain":"datadoghq.com","verified":true,"verifiedAt":"2026-10-23","verificationUrl":"https://www.datadoghq.com/careers/","boards":[{"source":"greenhouse","slug":"datadog"}]},
+  {"id":"flexport","name":"Flexport","domain":"flexport.com","verified":true,"verifiedAt":"2026-10-23","verificationUrl":"https://www.flexport.com/careers/","boards":[{"source":"greenhouse","slug":"flexport"}]},
+  {"id":"posthog","name":"PostHog","domain":"posthog.com","verified":true,"verifiedAt":"2026-10-23","verificationUrl":"https://posthog.com/careers","boards":[{"source":"ashby","slug":"posthog"}]},
+  {"id":"linear","name":"Linear","domain":"linear.app","verified":true,"verifiedAt":"2026-10-23","verificationUrl":"https://linear.app/careers","boards":[{"source":"ashby","slug":"linear"}]},
+  {"id":"supabase","name":"Supabase","domain":"supabase.com","verified":true,"verifiedAt":"2026-10-23","verificationUrl":"https://supabase.com/careers","boards":[{"source":"ashby","slug":"supabase"}]}
+]

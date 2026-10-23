@@ -1,0 +1,38 @@
+{
+  "id": "ai-automation",
+  "name": "AI automation",
+  "version": 2,
+  "description": "Find explicit workflow evidence that may justify an automation conversation. A match is evidence to review, not an assertion that the company wants outside help.",
+  "sentenceExclusions": ["we provide automation services", "our platform is used", "customers use our platform", "help customers automate"],
+  "excludedTitleTerms": ["forward deployed engineer", "field deployment engineer"],
+  "evidenceRules": [
+    {
+      "id": "reporting",
+      "label": "Manual reporting workflow",
+      "terms": ["manual reporting", "weekly reporting", "spreadsheet reporting"],
+      "suggestion": "Explore reporting consolidation and automated data flows.",
+      "question": "Is reducing manual reporting part of this role's first-quarter remit?"
+    },
+    {
+      "id": "reconciliation",
+      "label": "Manual reconciliation workflow",
+      "terms": ["manual reconciliation", "reconcile spreadsheets", "reconciliation process"],
+      "suggestion": "Explore automating reconciliation between business systems.",
+      "question": "Which reconciliation steps still require people to compare systems manually?"
+    },
+    {
+      "id": "document-processing",
+      "label": "Document processing workflow",
+      "terms": ["document processing", "process documents", "extract data from documents"],
+      "suggestion": "Explore document intake, extraction, and routing automation.",
+      "question": "What happens between receiving a document and getting its data into your systems?"
+    },
+    {
+      "id": "systems-integration",
+      "label": "Systems integration workflow",
+      "terms": ["integrate systems", "systems integration", "connect Salesforce"],
+      "suggestion": "Explore reliable integrations between the systems named in the role.",
+      "question": "Where does information need to move between systems without a reliable integration today?"
+    }
+  ]
+}

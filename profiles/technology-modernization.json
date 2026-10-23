@@ -1,0 +1,31 @@
+{
+  "id": "technology-modernization",
+  "name": "Technology modernization",
+  "version": 2,
+  "description": "Find explicit evidence of a migration, legacy-system burden, or integration program. A match is evidence to review, not an assertion that the company will hire external help.",
+  "sentenceExclusions": ["we provide modernization services", "our platform is used", "customers use our platform", "help customers migrate", "at client sites"],
+  "excludedTitleTerms": ["forward deployed engineer", "field deployment engineer"],
+  "evidenceRules": [
+    {
+      "id": "platform-migration",
+      "label": "Platform migration",
+      "terms": ["platform migration", "migrate to the cloud", "cloud migration"],
+      "suggestion": "Explore a phased migration plan and delivery support.",
+      "question": "Which platform migration has the highest operational risk this year?"
+    },
+    {
+      "id": "legacy-systems",
+      "label": "Legacy-system burden",
+      "terms": ["legacy systems", "legacy platform", "modernize legacy"],
+      "suggestion": "Explore modernization priorities and constraints in the legacy estate.",
+      "question": "Which legacy system is most limiting the team today?"
+    },
+    {
+      "id": "integration-program",
+      "label": "Integration program",
+      "terms": ["integration program", "enterprise integration", "integrate with legacy"],
+      "suggestion": "Explore integration architecture and delivery capacity.",
+      "question": "Which integration is blocking the broader modernization program?"
+    }
+  ]
+}

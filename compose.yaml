@@ -1,0 +1,58 @@
+services:
+  db:
+    image: postgres:17-bookworm
+    environment:
+      POSTGRES_DB: tripwire
+      POSTGRES_USER: tripwire
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:?Set a database password}
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      test: [CMD-SHELL, pg_isready -U tripwire -d tripwire]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+    restart: unless-stopped
+  migrate:
+    build:
+      context: .
+      target: build
+      args:
+        NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY: ${NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY:?Set Clerk publishable key}
+    env_file: .env.local
+    environment:
+      DATABASE_URL: postgresql://tripwire:${POSTGRES_PASSWORD}@db:5432/tripwire
+    command: [node, src/migrate.js]
+    depends_on:
+      db:
+        condition: service_healthy
+  web:
+    build:
+      context: .
+      args:
+        NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY: ${NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY:?Set Clerk publishable key}
+    env_file: .env.local
+    environment:
+      DATABASE_URL: postgresql://tripwire:${POSTGRES_PASSWORD}@db:5432/tripwire
+    ports:
+      - 127.0.0.1:3000:3000
+    depends_on:
+      migrate:
+        condition: service_completed_successfully
+    restart: unless-stopped
+  worker:
+    build:
+      context: .
+      target: build
+      args:
+        NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY: ${NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY:?Set Clerk publishable key}
+    env_file: .env.local
+    environment:
+      DATABASE_URL: postgresql://tripwire:${POSTGRES_PASSWORD}@db:5432/tripwire
+    command: [node, src/worker.js]
+    depends_on:
+      migrate:
+        condition: service_completed_successfully
+    restart: unless-stopped
+volumes:
+  postgres_data:

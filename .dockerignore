@@ -1,0 +1,11 @@
+node_modules
+.next
+.env*
+.git
+work
+data
+
+.local
+archive
+.clerk
+*.tsbuildinfo
